@@ -22,6 +22,7 @@
     window.backgroundColor = [UIColor whiteColor];
     window.rootViewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     [window makeKeyAndVisible];
+    self.window = window;
     return YES;
 }
 

@@ -34,6 +34,9 @@
     //set up the container sublayer transform
     CATransform3D perspective = CATransform3DIdentity;
     perspective.m34 = -1.0 / 500.0;
+    perspective = CATransform3DRotate(perspective, -M_PI_4, 1, 0, 0);
+    perspective = CATransform3DRotate(perspective, -M_PI_4, 0, 1, 0);
+    
     self.containerView.layer.sublayerTransform = perspective;
     //add cube face 1
     CATransform3D transform = CATransform3DMakeTranslation(0, 0, 100);
